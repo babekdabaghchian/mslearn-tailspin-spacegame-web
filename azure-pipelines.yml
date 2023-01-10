@@ -22,7 +22,7 @@ steps:
     version: '6.x'
 
 - task: NPm@1
-  diplayName: 'Run npm install'
+  displayName: 'Run npm install'
   inputs:
     verbose: false
 
@@ -33,7 +33,7 @@ steps:
   displayName: 'Run gulp tasks'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-  displayname: 'Write build info'
+  displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
 - task: DotNetCoreCLI@2
